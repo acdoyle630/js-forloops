@@ -69,9 +69,17 @@ Write a for-loop that concatenates a Number value into that string on each itera
 
 4-A) Create a function called `appendToString` and have it produce the same result as above. Console.log your results.
 */
+
+var stringOfNumbers = ' ' ;
+
+function addToString () {
 for (var i=10; i<21; i++) {
 	var columns = i;
+  console.log( stringOfNumbers = i);
+} 
 }
+addToString();
+console.log(stringOfNumbers);
 
 /* 5) Even Stevens
 Declare a variable named `evenNumArr` and assign its value to an empty array. 
@@ -79,8 +87,18 @@ Declare a variable named `evenNumArr` and assign its value to an empty array.
 Write a for-loop that will push even numbers to the `evenNumArr` array. We want to push 50 even even numbers starting from 0.
 Console.log your results.
 */
+var evenNumArr = [ ];
 
-
+function evenPick (  ) {
+for (var i=0; i<100; i++) {
+	if ( i % 2 === 0 ) {
+		evenNumArr.push ([i]);
+	}
+  }
+}
+evenPick(evenNumArr);
+console.log (evenNumArr);
+console.log (evenNumArr.length);
 /* 6) Up the Odds
 Declare a variable named `oddSum` and assign it to the Number value 0.
 
