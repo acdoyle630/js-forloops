@@ -121,6 +121,18 @@ Note that every odd index value in `oopsArray` is currently `undefined`. Using a
 [ 'turn' , 'nope' , 'down' , 'nope' , 'for' , 'nope' , 'what' ]
 */
 
+var oppsArray = ['turn',' ' , 'down',' ' , 'for', ' ' , 'what'];
+
+function nope (arr) {
+for (var i=0; i<7; i++) {
+	if (i % 2 === 1) {
+		arr [i] = 'nope';
+	}
+
+  } 
+}
+nope ( oppsArray );
+console.log(oppsArray );
 
 /* 8) Is It There Opps
 Using a for-loop, iterate through the Array stored at `oopsArray` backwards. Console.log your result. It should look like this:
