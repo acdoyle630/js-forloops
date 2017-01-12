@@ -74,12 +74,11 @@ var stringOfNumbers = ' ' ;
 
 function addToString () {
 for (var i=10; i<21; i++) {
-	var columns = i;
-  console.log( stringOfNumbers = i);
-} 
+	stringOfNumbers += i;
+	} 
 }
 addToString();
-console.log(stringOfNumbers);
+console.log('string' + stringOfNumbers);
 
 /* 5) Even Stevens
 Declare a variable named `evenNumArr` and assign its value to an empty array. 
@@ -107,9 +106,10 @@ Console.log your results.
 */
  var oddSum = 0;
 
-for (var i=1; i<49; i++) {
+for (var i=1; i<=101; i++) {
 	if (i % 2 === 1 ) {
 		console.log (oddSum += i);
+
 	}
 } 
 console.log(oddSum); 
@@ -193,6 +193,21 @@ Declare a variable named `topQuote` and assign it to a String value of your favo
 Write a function that will iterate through the string value and return the longest word in that quote. Console.log your result.
 */
 
+var topQuote = 'Atmosphere God Loves Ugly';
+function findLongestWord(str) {
+  var words = str.split(' ');
+  var longest = 0;
+
+  for (var i=0;i<words.length;i++) {
+    if (words[i].length > longest) {
+      longest = words[i].length;
+    }
+
+    return longest;
+  }
+}
+console.log (findLongestWord (topQuote));
+
 /* 12) Puppet Master
 Declare a variable named `miscStorage` set it's value to be: `[ [], 'Carrots', 9, 'Beets', {}, {name: "Todd B."}, 'Mush' ]`
 Write a function named `generateArrayOfStrings` which takes a single argument `storage`. This function will return a new Array with only `String` values inside of it.
@@ -201,18 +216,28 @@ Write a function named `generateArrayOfStrings` which takes a single argument `s
    @return Datatype: Array
 
 */
+var str = [ ];
+var miscStorage = [ [], 'carrots', 9, 'beets', {}, {name: 'Todd B'},  'mush' ];
+function generateArrayOfStrings (storage) {
+	for (var i=0; i<storage.length; i++) {
+		if (typeof storage[i] === 'string') {
+			str.push (storage[i]);
+		}
+	} return str;
+}
 
+generateArrayOfStrings (miscStorage);
+console.log (str);
 /* 13) All Grown Up 
 Write a function that will capitalize the first letter in each word in the phrase below. The function will console.log the message: "I've Lived A Life That's Full. I've Traveled Each and Every Highway. But More, Much More Than This. I Did It My Way."  
 */
 
-var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way."
+var myWay = "i've lived a life that's full, i've traveled each and every highway. but more, much more than this. i did it my way.";
 
 
 /* 14) Back to School
 Declare a variable named `currentCohort` and set it's value to be this [array found here](https://gist.github.com/sgnl/e40879b2249e06ca7811).
-Write a function named `graduateAndSetNewClass`, which takes a single argument called `cohort`.
-
+Write a function named `graduateAndSetNewClass`, which takes a single argument called `cohort`
    @param Datatype: Array `cohort`
 
 The function will iterate through the `cohort` argument and check each student's `enrolled` property.
@@ -220,3 +245,4 @@ If the `enrolled` property is set to `true` then change that student's `graduate
 Console.log your result.
 */
 
+var currentCohort = [];
